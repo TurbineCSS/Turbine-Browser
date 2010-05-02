@@ -38,19 +38,19 @@ class Basset {
 	public $browserversion = 'unknown';
 
 	/**
-	 * @var string $type OS type (e.g. "Windows")
-	 */
-	public $os = 'unknown';
-
-	/**
-	 * @var float $typeversion OS version (e.g. "4.0")
-	 */
-	public $osversion = 'unknown';
-
-	/**
-	 * @var string $platform Browser platform (e.g. "Desktop")
+	 * @var string $platform OS type (e.g. "Windows")
 	 */
 	public $platform = 'unknown';
+
+	/**
+	 * @var float $platformversion OS version (e.g. "4.0")
+	 */
+	public $platformversion = 'unknown';
+
+	/**
+	 * @var string $platformtype Browser platform type (e.g. "Desktop")
+	 */
+	public $platformtype = 'unknown';
 
 
 	/**
