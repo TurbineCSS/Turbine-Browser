@@ -162,7 +162,448 @@ $ua_tests = array(
 			'platform_version' => '0',
 			'platform_type' => 'desktop'
 		)
+	),
+
+		// Gecko/Mozilla
+	'Firefox 3.5 on Win7' => array(
+	),
+	'Firefox 3.5 on Vista' => array(
+	),
+	'Firefox 3.5 on WinXP' => array(
+	),
+	'Firefox 3.5 on OS X' => array(
+	),
+	'Firefox 3.5 on Linux' => array(
+	),
+	'Firefox 3.6 on Win7' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; lt; rv:1.9.2) Gecko/20100115 Firefox/3.6',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '1.923',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 3.6 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.0; ru; rv:1.9.2) Gecko/20100115 Firefox/3.6',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '1.92',
+			'platform' => 'windows',
+			'platform_version' => '6.0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 3.6 on WinXP' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; pt-BR; rv:1.9.2) Gecko/20100115 Firefox/3.6',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '1.92',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 3.6 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2) Gecko/20091218 Firefox 3.6',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '1.92',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 3.6 on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2) Gecko/20100222 Ubuntu/10.04 (lucid) Firefox/3.6',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '1.92',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+
+		// Strange Gecko/Mozilla pre-releases and spin-offs
+	'Firefox 3.6.x pre on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; de-DE; rv:1.9.2.3pre) Gecko/20100326 Ubuntu/9.10 (karmic) Namoroka/3.6.3pre',
+		'test' => array(
+			'browser' => 'gecko',
+			'browser_version' => '1.923',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 3.7a pre on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; de-DE; rv:1.9.3a3pre) Gecko/20100304 Ubuntu/9.10 (karmic) Minefield/3.7a3pre',
+		'test' => array(
+			'browser' => 'gecko',
+			'browser_version' => '1.93',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Songbird 1.4 on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.14) Gecko/2009091418 Songbird/1.4.3 (20091223030122)',
+		'test' => array(
+			'browser' => 'gecko',
+			'browser_version' => '1.9014',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Flock 2.5.6 on WinXP' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7 Flock/2.5.6 (.NET CLR 3.5.30729)',
+		'test' => array(
+			'browser' => 'gecko',
+			'browser_version' => '1.9014',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
+	),
+
+
+	// Opera
+	'Opera < 10 on Win7' => array(
+	),
+	'Opera < 10 on Vista' => array(
+	),
+	'Opera < 10 on WinXP' => array(
+	),
+	'Opera < 10 on OS X' => array(
+	),
+	'Opera < 10 on Linux' => array(
+		'ua' => 'Opera/9.60 (X11; Linux i686; U; en) Presto/2.1.1',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.60',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Opera >= 10 on Win7' => array(
+	),
+	'Opera >= 10 on Vista' => array(
+	),
+	'Opera >= 10 on WinXP' => array(
+	),
+	'Opera >= 10 on OS X' => array(
+		'ua' => 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '10.00',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Opera >= 10 on Linux' => array(
+		'ua' => 'Opera/9.80 (X11; Linux x86_64; U; de) Presto/2.2.15 Version/10.10',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '10.10',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+
+
+	// Chrome
+	'Chrome 4 on Win 7' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.1.249.1025 Safari/532.5',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '4.12491025',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 4 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.224.2 Safari/532.3',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '4.02242',
+			'platform' => 'windows',
+			'platform_version' => '6.0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 4 on WinXP' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.8 (KHTML, like Gecko) Chrome/4.0.288.1 Safari/532.8',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '4.02881',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 4 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-US) AppleWebKit/532.8 (KHTML, like Gecko) Chrome/4.0.302.2 Safari/532.8',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '4.03022',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 4 on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Slackware Linux x86_64; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.30 Safari/532.5',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '4.02493',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 5 on Win 7' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.3 (KHTML, like Gecko) Chrome/5.0.354.0 Safari/533.3',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '5.0354',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 5 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/533.2 (KHTML, like Gecko) Chrome/5.0.342.5 Safari/533.2',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '5.03425',
+			'platform' => 'windows',
+			'platform_version' => '6.0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 5 on WinXP' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.3 (KHTML, like Gecko) Chrome/5.0.355.0 Safari/533.3',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '5.0355',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 5 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-US) AppleWebKit/533.2 (KHTML, like Gecko) Chrome/5.0.343.0 Safari/533.2',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '5.0343',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Chrome 5 on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.307.11 Safari/532.9',
+		'test' => array(
+			'browser' => 'chrome',
+			'browser_version' => '5.030711',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+
+
+	// The more esoteric browsers
+	'iCab >= 4' => array(
+		'ua' => 'iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)',
+		'test' => array(
+			'browser' => 'iCab',
+			'browser_version' => '4.5',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'iCab < 4' => array(
+		'ua' => 'Mozilla/5.0 (compatible; iCab 3.0.5; Macintosh; U; PPC Mac OS)',
+		'test' => array(
+			'browser' => 'iCab',
+			'browser_version' => '3.05',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Epiphany >= 2.28' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; nl-nl) AppleWebKit/531.2+ (KHTML, like Gecko) Safari/531.2+ Epiphany/2.29.91',
+		'test' => array(
+			'browser' => 'epiphany',
+			'browser_version' => '2.2991',
+			'platform' => 'Linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Epiphany <= 2.22' => array(
+		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; en; rv:1.9.0.8) Gecko/20080528 Fedora/2.24.3-4.fc10 Epiphany/2.22 Firefox/3.0',
+		'test' => array(
+			'browser' => 'epiphany',
+			'browser_version' => '2.22',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+
+	// Tablets and phones
+	'iPad' => array(
+		'ua' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '4.04',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'iPhone OS 3.0' => array(
+		'ua' => 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '3',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'iPhone OS 3.1.2' => array(
+		'ua' => 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '4',
+			'platform' => 'mac',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'Opera Mini' => array(
+		'ua' => 'Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.10031/298; U; en)',
+		'test' => array(
+			'browser' => 'opera mini',
+			'browser_version' => '4.010031',
+			'platform' => false,
+			'platform_version' => false,
+			'platform_type' => 'mobile'
+		)
+	),
+	'Blackberry 9XXX' => array(
+		'ua' => 'BlackBerry9700/5.0.0.351 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/123',
+		'test' => array(
+			'browser' => 'blackberry',
+			'browser_version' => false,
+			'platform' => 'blackberry',
+			'platform_version' => false,
+			'platform_type' => 'mobile'
+		)
+	),
+	'Blackberry 88XX' => array(
+		'ua' => 'BlackBerry8330/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105',
+		'test' => array(
+			'browser' => 'blackberry',
+			'browser_version' => false,
+			'platform' => 'blackberry',
+			'platform_version' => false,
+			'platform_type' => 'mobile'
+		)
+	),
+	'Blackberry 87XX' => array(
+		'ua' => 'BlackBerry8703e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105',
+		'test' => array(
+			'browser' => 'blackberry',
+			'browser_version' => false,
+			'platform' => 'blackberry',
+			'platform_version' => false,
+			'platform_type' => 'mobile'
+		)
+	),
+	'Blackberry 81XX' => array(
+		'ua' => 'BlackBerry8130/4.5.0.89 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106',
+		'test' => array(
+			'browser' => 'blackberry',
+			'browser_version' => false,
+			'platform' => 'blackberry',
+			'platform_version' => false,
+			'platform_type' => 'mobile'
+		)
+	),
+	'Android 2.1' => array(
+		'ua' => 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17',
+		'test' => array(
+			'browser' => 'android',
+			'browser_version' => '4.0',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'HP' => array(
+		'ua' => array(
+			'Mozilla/4.0 (compatible; MSIE 4.01; Windows CE; PPC; 240x320; HP iPAQ h6300)',
+			'Mozilla/4.0 (compatible; MSIE 4.01; Windows CE; PPC; 240x320)'
+		),
+		'test' => array(
+			'browser' => 'msie',
+			'browser_version' => '4.01',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'HTC + IE' => array(
+		'ua' => array(
+			'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 8.12; MSIEMobile 6.0) USCCHTC6875',
+			'Modzilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11) 480x640; XV6850; Window Mobile 6.1 Professional',
+			'HTC-P4600/1.2 Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11) UP.Link/6.3.1.17.0',
+			'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11) '
+		),
+		'test' => array(
+			'browser' => 'msie',
+			'browser_version' => '6',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'HTC Touch PRO/PRO2 + Opera' => array(
+		'ua' => array(
+			'HTC-ST7377/1.59.502.3 (67150) Opera/9.50 (Windows NT 5.1; U; en) UP.Link/6.3.1.17.0',
+			'htc_touch_pro2_t7373 opera/9.50 (windows nt 5.1; u; de)'
+		),
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.5',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
+	'Kindle' => array(
+		'ua' => 'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)',
+		'test' => array(
+			'browser' => 'kindle',
+			'browser_version' => '2.0',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
 	)
+
 
 );
 

@@ -59,7 +59,7 @@ class Basset {
 	 * @return void
 	 */
 	public function __construct($ua = NULL){
-		if($ua){
+		if($ua !== NULL){
 			$this->ua = $ua;
 		}
 		else{
@@ -104,8 +104,14 @@ class Basset {
 		elseif(preg_match('/mac/i', $this->ua)){
 			$this->platform = 'mac';
 			// Mobile or desktop?
-			if(preg_match('/(iphone|ipod|ipad)/', $this->ua)){
-				$this->platform_type = 'mobile';
+			if(preg_match('/(iphone|ipod|mobile)/i', $this->ua)){
+				// The iPad should count as "desktop"
+				if(preg_match('/ipad/i', $this->ua)){
+					$this->platform_type = 'desktop';
+				}
+				else{
+					$this->platform_type = 'mobile';
+				}
 			}
 			else{
 				$this->platform_type = 'desktop';
@@ -115,7 +121,7 @@ class Basset {
 		elseif(preg_match('/linux/i', $this->ua)){
 			$this->platform = 'linux';
 			// Mobile linux or desktop?
-			if(preg_match('/linux arm/', $this->ua)){
+			if(preg_match('/linux arm/i', $this->ua)){
 				$this->platform_type = 'mobile';
 			}
 			else{
