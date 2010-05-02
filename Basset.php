@@ -22,6 +22,66 @@
 
 class Basset {
 
+	/**
+	 * @var string $ua User agent string
+	 */
+	public $ua = NULL;
+
+	/**
+	 * @var string $browser Browser type (e.g. "Firefox")
+	 */
+	public $browser = 'unknown';
+
+	/**
+	 * @var float $browserversion Browser version (e.g. "3.6")
+	 */
+	public $browserversion = 'unknown';
+
+	/**
+	 * @var string $type OS type (e.g. "Windows")
+	 */
+	public $os = 'unknown';
+
+	/**
+	 * @var float $typeversion OS version (e.g. "4.0")
+	 */
+	public $osversion = 'unknown';
+
+	/**
+	 * @var string $platform Browser platform (e.g. "Desktop")
+	 */
+	public $platform = 'unknown';
+
+
+	/**
+	 * __construct
+	 * Class constructor. Sets the user agent var
+	 * @return void
+	 */
+	public function __construct($ua = NULL){
+		if(!$ua){
+			$this->ua = $ua;
+		}
+		else{
+			$this->ua = $_SERVER['HTTP_USER_AGENT'];
+		}
+	}
+
+
+	/**
+	 * parse
+	 * Parses the user agent
+	 * @return void
+	 */
+	public function parse(){
+		if($this->ua){
+			$this->getPlatform();
+			$this->getOs();
+			$this->getBrowser();
+		}
+	}
+
+
 }
 
 ?>
