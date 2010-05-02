@@ -52,6 +52,28 @@ class Basset {
 	 */
 	public $platform_type = 'unknown';
 
+	/**
+	 * @var array $mobile_agents List of keywords that may identify a mobile something
+	 */
+	public $mobile_agents = array(
+		'android',
+		'blackberry',
+		'blazer',
+		'handspring',
+		'kyocera',
+		'lg',
+		'motorola',
+		'nokia',
+		'palm',
+		'playstation portable',
+		'samsung',
+		'smartphone',
+		'sonyericsson',
+		'symbian',
+		'wap',
+		'htc'
+	);
+
 
 	/**
 	 * __construct
@@ -121,7 +143,7 @@ class Basset {
 		elseif(preg_match('/linux/i', $this->ua)){
 			$this->platform = 'linux';
 			// Mobile linux or desktop?
-			if(preg_match('/linux arm/i', $this->ua)){
+			if(preg_match('/(linux arm|android|kindle)/i', $this->ua)){
 				$this->platform_type = 'mobile';
 			}
 			else{
@@ -133,10 +155,36 @@ class Basset {
 			$this->platform = 'unix';
 			$this->platform_type = 'desktop';
 		}
-		// Mobile
+		// Other mobile devices
 		else{
-
+			$mobile_agent = $this->detect_mobile_devices();
+			if($mobile_agent !== false){
+				// Set as platform
+				$this->platform = $mobile_agent;
+				$this->platform_version = 0;
+				$this->platform_type = 'mobile';
+				// Set as a browser if nothing better us available
+				if($this->browser == 'unknown'){
+					$this->browser = $mobile_agent;
+					$this->browser_version = 0;
+				}
+			}
 		}
+	}
+
+
+	/**
+	 * detect_mobile_devices
+	 * When all else fails, it is probably some strange mobile thingy
+	 * @return $agent A mobile user agent (or false if nothing is found)
+	 */
+	public function detect_mobile_devices(){
+		foreach($this->mobile_agents as $agent){
+			if(preg_match('/'.$agent.'/i', $this->ua)){
+				return $agent;
+			}
+		}
+		return false;
 	}
 
 
