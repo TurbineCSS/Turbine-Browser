@@ -35,7 +35,7 @@ class Basset {
 	/**
 	 * @var float $browserversion Browser version (e.g. "3.6")
 	 */
-	public $browserversion = 'unknown';
+	public $browser_version = 'unknown';
 
 	/**
 	 * @var string $platform OS type (e.g. "Windows")
@@ -45,12 +45,12 @@ class Basset {
 	/**
 	 * @var float $platformversion OS version (e.g. "4.0")
 	 */
-	public $platformversion = 'unknown';
+	public $platform_version = 'unknown';
 
 	/**
 	 * @var string $platformtype Browser platform type (e.g. "Desktop")
 	 */
-	public $platformtype = 'unknown';
+	public $platform_type = 'unknown';
 
 
 	/**
@@ -59,7 +59,7 @@ class Basset {
 	 * @return void
 	 */
 	public function __construct($ua = NULL){
-		if(!$ua){
+		if($ua){
 			$this->ua = $ua;
 		}
 		else{
@@ -75,9 +75,61 @@ class Basset {
 	 */
 	public function parse(){
 		if($this->ua){
-			$this->getPlatform();
-			$this->getOs();
-			$this->getBrowser();
+			$this->get_platform();
+			// $this->get_browser();
+		}
+	}
+
+
+	/**
+	 * get_platform
+	 * Tries to get the platform (os plus version number) from the ua string
+	 * @return void
+	 */
+	public function get_platform(){
+		// Windows
+		if(preg_match('/windows/i', $this->ua)){
+			$this->platform = 'windows';
+			// Windows mobile or desktop?
+			if(preg_match('/Windows CE/i',$this->ua)){
+				$this->platform_type = 'mobile';
+				// $this->platform_version = $this->get_windows_mobile_version();
+			}
+			else{
+				$this->platform_type = 'desktop';
+				// $this->platform_version = $this->get_windows_desktop_version();
+			}
+		}
+		// Mac
+		elseif(preg_match('/mac/i', $this->ua)){
+			$this->platform = 'mac';
+			// Mobile or desktop?
+			if(preg_match('/(iphone|ipod|ipad)/', $this->ua)){
+				$this->platform_type = 'mobile';
+			}
+			else{
+				$this->platform_type = 'desktop';
+			}
+		}
+		// Linux
+		elseif(preg_match('/linux/i', $this->ua)){
+			$this->platform = 'linux';
+			// Mobile linux or desktop?
+			if(preg_match('/linux arm/', $this->ua)){
+				$this->platform_type = 'mobile';
+			}
+			else{
+				$this->platform_type = 'desktop';
+			}
+		}
+		// Unix
+		elseif(preg_match('/(freebsd|openbsd|solaris|sunos)/i', $this->ua)){
+			$this->platform = 'unix';
+			$this->platform_type = 'desktop';
+		}
+		// Mobile
+		else{
+
 		}
 	}
 
