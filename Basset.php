@@ -115,11 +115,11 @@ class Basset {
 			// Windows mobile or desktop?
 			if(preg_match('/Windows CE/i',$this->ua)){
 				$this->platform_type = 'mobile';
-				// $this->platform_version = $this->get_windows_mobile_version();
+				$this->platform_version = '0';
 			}
 			else{
 				$this->platform_type = 'desktop';
-				// $this->platform_version = $this->get_windows_desktop_version();
+				$this->platform_version = $this->get_windows_version();
 			}
 		}
 		// Mac
@@ -149,6 +149,7 @@ class Basset {
 			else{
 				$this->platform_type = 'desktop';
 			}
+			$this->platform_version = '0';
 		}
 		// Unix
 		elseif(preg_match('/(freebsd|openbsd|solaris|sunos)/i', $this->ua)){
@@ -185,6 +186,36 @@ class Basset {
 			}
 		}
 		return false;
+	}
+
+
+	/**
+	 * get_windows_version
+	 * Extracts the version number from a windows user agent string
+	 * @return $version The version number
+	 */
+	public function get_windows_version(){
+		if(preg_match('/Windows NT\s*([0-9\.]+)/i', $this->ua, $matches)){
+			return $matches[1];
+		}
+		elseif(preg_match('/Windows\s*([0-9\.]+)/i', $this->ua, $matches)){
+			return $matches[1];
+		}
+		elseif(preg_match('/Windows XP/i', $this->ua)){
+			return 5.1;
+		}
+		elseif(preg_match('/Windows 95/i', $this->ua)){
+			return 4;
+		}
+		elseif(preg_match('/Windows 98/i', $this->ua)){
+			return 4.1;
+		}
+		elseif(preg_match('/Windows ME/i', $this->ua)){
+			return 4.9;
+		}
+		else{
+			return 0;
+		}
 	}
 
 
