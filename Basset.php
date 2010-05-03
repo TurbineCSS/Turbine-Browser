@@ -99,7 +99,7 @@ class Basset {
 	public function parse(){
 		if($this->ua){
 			$this->get_platform();
-			// $this->get_browser();
+			$this->get_browser();
 		}
 	}
 
@@ -189,6 +189,30 @@ class Basset {
 		}
 		return false;
 	}
+
+
+	/**
+	 * get_browser
+	 * Tries to find out which browser we have here...
+	 * @return void
+	 */
+	public function get_browser(){
+		// IE
+		if(preg_match('/msie/i', $this->ua)){
+			$this->browser = 'ie';
+			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// Chrome
+		elseif(preg_match('/chrome/i', $this->ua)){
+			$this->browser = 'chrome';
+			if(preg_match('/chrome\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+	}
+
 
 
 	/**
