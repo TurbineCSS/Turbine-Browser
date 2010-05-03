@@ -558,7 +558,7 @@ $ua_tests = array(
 			'Mozilla/4.0 (compatible; MSIE 4.01; Windows CE; PPC; 240x320)'
 		),
 		'test' => array(
-			'browser' => 'msie',
+			'browser' => 'ie',
 			'browser_version' => '4.01',
 			'platform' => 'windows',
 			'platform_version' => '0',
@@ -573,7 +573,7 @@ $ua_tests = array(
 			'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11) '
 		),
 		'test' => array(
-			'browser' => 'msie',
+			'browser' => 'ie',
 			'browser_version' => '6',
 			'platform' => 'windows',
 			'platform_version' => '0',

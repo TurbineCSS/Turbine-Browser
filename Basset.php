@@ -197,10 +197,10 @@ class Basset {
 	 * @return void
 	 */
 	public function get_browser(){
-		// IE
-		if(preg_match('/msie/i', $this->ua)){
-			$this->browser = 'ie';
-			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
+		// Android
+		if(preg_match('/android/i', $this->ua)){
+			$this->browser = 'android';
+			if(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}
@@ -208,6 +208,23 @@ class Basset {
 		elseif(preg_match('/chrome/i', $this->ua)){
 			$this->browser = 'chrome';
 			if(preg_match('/chrome\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// iCab (does anyone use this anyway?)
+		elseif(preg_match('/icab/i', $this->ua)){
+			$this->browser = 'icab';
+			if(preg_match('/icab\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+			elseif(preg_match('/iCab ([0-9\.]+)/i',$this->ua, $matches) > 0){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// IE
+		elseif(preg_match('/msie/i', $this->ua)){
+			$this->browser = 'ie';
+			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}
