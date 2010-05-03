@@ -159,7 +159,7 @@ $ua_tests = array(
 			'browser' => 'safari',
 			'browser_version' => '4.02',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10.57',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -211,7 +211,7 @@ $ua_tests = array(
 			'browser' => 'firefox',
 			'browser_version' => '1.92',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10.6',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -226,7 +226,7 @@ $ua_tests = array(
 		)
 	),
 
-		// Strange Gecko/Mozilla pre-releases and spin-offs
+	// Strange Gecko/Mozilla pre-releases and spin-offs
 	'Firefox 3.6.x pre on Linux' => array(
 		'ua' => 'Mozilla/5.0 (X11; U; Linux x86_64; de-DE; rv:1.9.2.3pre) Gecko/20100326 Ubuntu/9.10 (karmic) Namoroka/3.6.3pre',
 		'test' => array(
@@ -300,7 +300,7 @@ $ua_tests = array(
 			'browser' => 'opera',
 			'browser_version' => '10.00',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -353,7 +353,7 @@ $ua_tests = array(
 			'browser' => 'chrome',
 			'browser_version' => '4.03022',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10.58',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -403,7 +403,7 @@ $ua_tests = array(
 			'browser' => 'chrome',
 			'browser_version' => '5.0343',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10.62',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -426,7 +426,7 @@ $ua_tests = array(
 			'browser' => 'iCab',
 			'browser_version' => '4.5',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10.57',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -436,7 +436,7 @@ $ua_tests = array(
 			'browser' => 'iCab',
 			'browser_version' => '3.05',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => false,
 			'platform_type' => 'desktop'
 		)
 	),
@@ -468,7 +468,7 @@ $ua_tests = array(
 			'browser' => 'safari',
 			'browser_version' => '4.04',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -478,7 +478,7 @@ $ua_tests = array(
 			'browser' => 'safari',
 			'browser_version' => '3',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -488,7 +488,7 @@ $ua_tests = array(
 			'browser' => 'safari',
 			'browser_version' => '4',
 			'platform' => 'mac',
-			'platform_version' => '0',
+			'platform_version' => '10',
 			'platform_type' => 'mobile'
 		)
 	),
