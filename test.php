@@ -647,7 +647,7 @@ $ua_tests = array(
 			'browser' => 'opera',
 			'browser_version' => '9.5',
 			'platform' => 'windows',
-			'platform_version' => '0',
+			'platform_version' => '5.1',
 			'platform_type' => 'mobile'
 		)
 	),

@@ -242,6 +242,17 @@ class Basset {
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}
+		// Opera
+		elseif(preg_match('/opera/i', $this->ua)){
+			if(preg_match('/opera mini\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->platform_type = 'mobile';
+				$this->browser = 'opera mini';
+			}
+			else{
+				$this->browser = 'opera';
+			}
+			$this->browser_version = $this->get_opera_version();
+		}
 		// Safari
 		elseif(preg_match('/safari/i', $this->ua)){
 			$this->browser = 'safari';
@@ -255,7 +266,7 @@ class Basset {
 
 	/**
 	 * get_windows_version
-	 * Extracts the version number from a windows user agent string
+	 * Extracts the os version number from a windows user agent string
 	 * @return float The version number
 	 */
 	public function get_windows_version(){
@@ -285,7 +296,7 @@ class Basset {
 
 	/**
 	 * get_mac_version
-	 * Extracts the version number from an osx user agent string
+	 * Extracts the os version number from an osx user agent string
 	 * @return int The version number
 	 */
 	public function get_mac_version(){
@@ -298,6 +309,27 @@ class Basset {
 		else{
 			return 'unknown';
 		}
+	}
+
+
+	/**
+	 * get_opera_version
+	 * Extracts the browser version number from an opera user agent string
+	 * @return mixed $version The version number
+	 */
+	public function get_opera_version(){
+		if(!preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
+			if(!preg_match('/opera mini\/([0-9\.]+)/i', $this->ua, $matches)){
+				preg_match('/opera\/([0-9\.]+)/i', $this->ua, $matches);
+			}
+		}
+		if(!empty($matches[1])){
+			$version = $this->version_to_float($matches[1]);
+		}
+		else{
+			$version = 'unknown';
+		}
+		return $version;
 	}
 
 
