@@ -211,6 +211,13 @@ class Basset {
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}
+		// Epiphany
+		elseif(preg_match('/epiphany/i', $this->ua)){
+			$this->browser = 'epiphany';
+			if(preg_match('/epiphany\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
 		// iCab (does anyone use this anyway?)
 		elseif(preg_match('/icab/i', $this->ua)){
 			$this->browser = 'icab';
@@ -225,6 +232,20 @@ class Basset {
 		elseif(preg_match('/msie/i', $this->ua)){
 			$this->browser = 'ie';
 			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// Midori
+		elseif(preg_match('/midori/i', $this->ua)){
+			$this->browser = 'midori';
+			if(preg_match('/midori\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// Safari
+		elseif(preg_match('/safari/i', $this->ua)){
+			$this->browser = 'safari';
+			if(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}

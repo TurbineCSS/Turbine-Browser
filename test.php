@@ -116,12 +116,44 @@ $ua_tests = array(
 
 	// Safari
 	'Safari 3.1 on Win7' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/525.19 (KHTML, like Gecko) Version/3.1.2 Safari/525.21',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '3.12',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Safari 3.1 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.0; pl-PL) AppleWebKit/525.19 (KHTML, like Gecko) Version/3.1.2 Safari/525.21',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '3.12',
+			'platform' => 'windows',
+			'platform_version' => '6.0',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Safari 3.1 on WinXP' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it-IT) AppleWebKit/525.19 (KHTML, like Gecko) Version/3.1.2 Safari/525.21',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '3.12',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Safari 3.1 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '3.12',
+			'platform' => 'mac',
+			'platform_version' => '10.56',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Safari 4 on Win7' => array(
 		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532+ (KHTML, like Gecko) Version/4.0.2 Safari/530.19.1',
@@ -419,7 +451,33 @@ $ua_tests = array(
 	),
 
 
-	// The more esoteric browsers
+	// Stuff noone uses
+	'Midori 0.2' => array(
+		'ua' => array(
+			'Mozilla/5.0 (X11; U; Linux i686; pt-br; rv:1.8.1) Gecko/20061010 Firefox/2.0 Midori/0.2.0',
+			'Mozilla/5.0 (iPhone; U; Linux i686; pt-br) AppleWebKit/532+ (KHTML, like Gecko) Version/3.0 Mobile/1A538b Safari/419.3 Midori/0.2.0'
+		),
+		'test' => array(
+			'browser' => 'Midori',
+			'browser_version' => '0.2',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Midori 0.1.7' => array(
+		'ua' => array(
+			'Mozilla/5.0 (X11; U; Linux; fr-fr) AppleWebKit/532+ (KHTML, like Gecko) Safari/419.3 Midori/0.1.7',
+			'Midori/0.1.7 (X11; Linux; U; en-us) WebKit/532+'
+		),
+		'test' => array(
+			'browser' => 'Midori',
+			'browser_version' => '0.17',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
 	'iCab >= 4' => array(
 		'ua' => 'iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)',
 		'test' => array(
