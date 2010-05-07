@@ -341,12 +341,44 @@ $ua_tests = array(
 
 	// Opera
 	'Opera < 10 on Win7' => array(
+		'ua' => 'Opera/9.64 (Windows NT 6.1; U; MRA 5.5 (build 02842); ru) Presto/2.1.1',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.64',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera < 10 on Vista' => array(
+		'ua' => 'Opera/9.25 (Windows NT 6.0; U; en)',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.25',
+			'platform' => 'windows',
+			'platform_version' => '6',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera < 10 on WinXP' => array(
+		'ua' => 'Opera/9.62 (Windows NT 5.1; U; en) Presto/2.1.1',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.62',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera < 10 on OS X' => array(
+		'ua' => 'Opera/9.20 (Macintosh; Intel Mac OS X; U; en)',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '9.2',
+			'platform' => 'mac',
+			'platform_version' => '10',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera < 10 on Linux' => array(
 		'ua' => 'Opera/9.60 (X11; Linux i686; U; en) Presto/2.1.1',
@@ -359,16 +391,40 @@ $ua_tests = array(
 		)
 	),
 	'Opera >= 10 on Win7' => array(
+		'ua' => 'Opera/9.80 (Windows NT 6.1; U; en) Presto/2.5.22 Version/10.51',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '10.51',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera >= 10 on Vista' => array(
+		'ua' => 'Opera/9.80 (Windows NT 6.0; U; en) Presto/2.5.22 Version/10.50',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '10.5',
+			'platform' => 'windows',
+			'platform_version' => '6',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera >= 10 on WinXP' => array(
+		'ua' => 'Opera/9.80 (Windows NT 5.1; U; en) Presto/2.5.22 Version/10.50',
+		'test' => array(
+			'browser' => 'opera',
+			'browser_version' => '10.5',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
 	),
 	'Opera >= 10 on OS X' => array(
 		'ua' => 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00',
 		'test' => array(
 			'browser' => 'opera',
-			'browser_version' => '10.00',
+			'browser_version' => '10',
 			'platform' => 'mac',
 			'platform_version' => '10',
 			'platform_type' => 'desktop'
