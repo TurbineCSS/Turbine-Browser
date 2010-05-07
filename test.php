@@ -765,7 +765,7 @@ $ua_tests = array(
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Basset test</title>
+		<title>Browser test</title>
 	</head>
 	<body>
 		<h1>Test results</h1>
@@ -788,7 +788,7 @@ $ua_tests = array(
 
 <?php
 
-include('Basset.php');
+include('browser.php');
 
 $properties = array('browser', 'browser_version', 'platform', 'platform_version', 'platform_type');
 
@@ -803,7 +803,7 @@ foreach($ua_tests as $title => $test){
 		if($ua != $uas[0]){
 			echo '<tr>';
 		}
-		$browser = new Basset($ua);
+		$browser = new Browser($ua);
 		$browser->parse();
 		foreach($properties as $property){
 			if(!isset($test['test'][$property]) || $test['test'][$property] == ''){

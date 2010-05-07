@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Basset - A PHP browser sniffer
- * http://github.com/SirPepe/Basset
+ * Browser - A PHP browser sniffer
+ * http://github.com/SirPepe/Browser
  *
  * Copyright (C) 2010 Peter Kröner
  *
@@ -20,7 +20,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-class Basset {
+class Browser {
 
 	/**
 	 * @var string $ua User agent string
@@ -33,7 +33,7 @@ class Basset {
 	public $browser = 'unknown';
 
 	/**
-	 * @var float $browserversion Browser version (e.g. "3.6")
+	 * @var float $browser_version Browser version (e.g. "3.6")
 	 */
 	public $browser_version = 'unknown';
 
@@ -43,12 +43,12 @@ class Basset {
 	public $platform = 'unknown';
 
 	/**
-	 * @var float $platformversion OS version (e.g. "4.0")
+	 * @var float $platform_version OS version (e.g. "4.0")
 	 */
 	public $platform_version = 'unknown';
 
 	/**
-	 * @var string $platformtype Browser platform type (e.g. "Desktop")
+	 * @var string $platform_type Browser platform type (e.g. "Desktop")
 	 */
 	public $platform_type = 'unknown';
 
