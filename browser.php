@@ -28,7 +28,7 @@ class Browser {
 	public $ua = NULL;
 
 	/**
-	 * @var string $browser Browser type (e.g. "Firefox")
+	 * @var string $browser Browser type (e.g. "firefox")
 	 */
 	public $browser = 'unknown';
 
@@ -38,7 +38,17 @@ class Browser {
 	public $browser_version = 'unknown';
 
 	/**
-	 * @var string $platform OS type (e.g. "Windows")
+	 * @var string $engine Browser engine (e.g. "webkit")
+	 */
+	public $engine = 'unknown';
+
+	/**
+	 * @var float $engine_version Browser engine version (e.g. "5.0")
+	 */
+	public $engine_version = 'unknown';
+
+	/**
+	 * @var string $platform OS type (e.g. "windows")
 	 */
 	public $platform = 'unknown';
 
@@ -48,7 +58,7 @@ class Browser {
 	public $platform_version = 'unknown';
 
 	/**
-	 * @var string $platform_type Browser platform type (e.g. "Desktop")
+	 * @var string $platform_type Browser platform type (e.g. "desktop")
 	 */
 	public $platform_type = 'unknown';
 
@@ -229,8 +239,10 @@ class Browser {
 		// IE
 		elseif(preg_match('/msie/i', $this->ua)){
 			$this->browser = 'ie';
+			$this->engine = 'ie';
 			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
+				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 		}
 		// Midori
@@ -254,13 +266,18 @@ class Browser {
 		// Safari
 		elseif(preg_match('/safari/i', $this->ua)){
 			$this->browser = 'safari';
+			$this->engine = 'webkit';
 			if(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+			if(preg_match('/safari\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 		}
 		// Firefox
 		elseif(preg_match('/(firefox|minefield|namoroka)/i', $this->ua, $name)){
 			$this->browser = 'firefox';
+			$this->engine = 'gecko';
 			if(preg_match('/'.$name[0].'(?:\/|[\s])([0-9\.]+)/i', $this->ua, $matches)){
 				if(preg_match('/(songbird|flock)/i', $this->ua)){
 					$this->browser_version = 'unknown';
@@ -269,11 +286,18 @@ class Browser {
 					$this->browser_version = $this->version_to_float($matches[1]);
 				}
 			}
+			if(preg_match('/rv:([0-9\.]+)/i', $this->ua, $matches)){
+				$this->engine_version = $this->version_to_float($matches[1]);
+			}
 		}
 		// Firefox variations
 		elseif(preg_match('/(songbird|flock)/i', $this->ua)){
 			$this->browser = 'firefox';
 			$this->browser_version = 'unknown';
+			$this->engine = 'gecko';
+			if(preg_match('/rv:([0-9\.]+)/i', $this->ua, $matches)){
+				$this->engine_version = $this->version_to_float($matches[1]);
+			}
 		}
 	}
 
