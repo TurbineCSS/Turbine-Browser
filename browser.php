@@ -81,7 +81,7 @@ class Browser {
 		'sonyericsson',
 		'symbian',
 		'wap',
-		'htc',
+		'htc(-|_)',
 		'midip'
 	);
 
@@ -129,7 +129,12 @@ class Browser {
 				$this->platform_version = '0';
 			}
 			else{
-				$this->platform_type = 'desktop';
+				if($this->detect_mobile_devices() !== false){
+					$this->platform_type = 'mobile';
+				}
+				else{
+					$this->platform_type = 'desktop';
+				}
 				$this->platform_version = $this->get_windows_version();
 			}
 		}
@@ -211,6 +216,8 @@ class Browser {
 			if(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
+			$this->engine = 'webkit';
+			$this->engine_version = $this->get_webkit_version();
 		}
 		// Chrome
 		elseif(preg_match('/chrome/i', $this->ua)){
@@ -218,6 +225,8 @@ class Browser {
 			if(preg_match('/chrome\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
+			$this->engine = 'webkit';
+			$this->engine_version = $this->get_webkit_version();
 		}
 		// Epiphany
 		elseif(preg_match('/epiphany/i', $this->ua)){
@@ -225,15 +234,28 @@ class Browser {
 			if(preg_match('/epiphany\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
+			if(preg_match('/webkit/i', $this->ua)){
+				$this->engine = 'webkit';
+				$this->engine_version = $this->get_webkit_version();
+			}
+			elseif(preg_match('/gecko/i', $this->ua)){
+				$this->engine = 'gecko';
+				if(preg_match('/rv:([0-9\.]+)/i', $this->ua, $matches)){
+					$this->engine_version = $this->version_to_float($matches[1]);
+				}
+			}
 		}
-		// iCab (does anyone use this anyway?)
+		// iCab
 		elseif(preg_match('/icab/i', $this->ua)){
 			$this->browser = 'icab';
+			$this->engine = 'icab';
 			if(preg_match('/icab\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
+				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 			elseif(preg_match('/iCab ([0-9\.]+)/i',$this->ua, $matches) > 0){
 				$this->browser_version = $this->version_to_float($matches[1]);
+				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 		}
 		// IE
@@ -245,15 +267,34 @@ class Browser {
 				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 		}
+		// Kindle
+		elseif(preg_match('/kindle/i', $this->ua)){
+			$this->browser = 'kindle';
+			if(preg_match('/kindle\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
 		// Midori
 		elseif(preg_match('/midori/i', $this->ua)){
 			$this->browser = 'midori';
 			if(preg_match('/midori\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
+			if(preg_match('/webkit/i', $this->ua)){
+				$this->engine = 'webkit';
+				$this->engine_version = $this->get_webkit_version();
+			}
+			elseif(preg_match('/gecko/i', $this->ua)){
+				$this->engine = 'gecko';
+				if(preg_match('/rv:([0-9\.]+)/i', $this->ua, $matches)){
+					$this->engine_version = $this->version_to_float($matches[1]);
+				}
+			}
 		}
 		// Opera
 		elseif(preg_match('/opera/i', $this->ua)){
+			$this->engine = 'opera';
+			$this->engine_version = $this->get_opera_version();
 			if(preg_match('/opera mini\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->platform_type = 'mobile';
 				$this->browser = 'opera mini';
@@ -266,13 +307,11 @@ class Browser {
 		// Safari
 		elseif(preg_match('/safari/i', $this->ua)){
 			$this->browser = 'safari';
-			$this->engine = 'webkit';
 			if(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
-			if(preg_match('/safari\/([0-9\.]+)/i', $this->ua, $matches)){
-				$this->engine_version = $this->version_to_float($matches[1]);
-			}
+			$this->engine = 'webkit';
+			$this->engine_version = $this->get_webkit_version();
 		}
 		// Firefox
 		elseif(preg_match('/(firefox|minefield|namoroka)/i', $this->ua, $name)){
@@ -336,7 +375,7 @@ class Browser {
 	/**
 	 * get_mac_version
 	 * Extracts the os version number from an osx user agent string
-	 * @return int The version number
+	 * @return float The version number
 	 */
 	public function get_mac_version(){
 		if(preg_match('/os x (?:[a-z]* )?([0-9_\.]+)/i', $this->ua, $matches)){
@@ -344,6 +383,24 @@ class Browser {
 		}
 		elseif(preg_match('/os x/i', $this->ua)){
 			return 10;
+		}
+		else{
+			return 'unknown';
+		}
+	}
+
+
+	/**
+	 * get_webkit_version
+	 * Extracts the webkit engine version number from an user agent string
+	 * @return float The version number
+	 */
+	public function get_webkit_version(){
+		if(preg_match('/webkit\/([0-9\.]+)/i', $this->ua, $matches)){
+			return $this->version_to_float($matches[1]);
+		}
+		elseif(preg_match('/version\/([0-9\.]+)/i', $this->ua, $matches)){
+			return $this->version_to_float($matches[1]);
 		}
 		else{
 			return 'unknown';
