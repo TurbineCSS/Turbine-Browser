@@ -260,6 +260,23 @@ class Basset {
 				$this->browser_version = $this->version_to_float($matches[1]);
 			}
 		}
+		// Firefox
+		elseif(preg_match('/(firefox|minefield|namoroka)/i', $this->ua, $name)){
+			$this->browser = 'firefox';
+			if(preg_match('/'.$name[0].'(?:\/|[\s])([0-9\.]+)/i', $this->ua, $matches)){
+				if(preg_match('/(songbird|flock)/i', $this->ua)){
+					$this->browser_version = 'unknown';
+				}
+				else{
+					$this->browser_version = $this->version_to_float($matches[1]);
+				}
+			}
+		}
+		// Firefox variations
+		elseif(preg_match('/(songbird|flock)/i', $this->ua)){
+			$this->browser = 'firefox';
+			$this->browser_version = 'unknown';
+		}
 	}
 
 
