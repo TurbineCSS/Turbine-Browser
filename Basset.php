@@ -164,12 +164,10 @@ class Basset {
 			if($mobile_agent !== false){
 				// Set as platform
 				$this->platform = $mobile_agent;
-				$this->platform_version = 0;
 				$this->platform_type = 'mobile';
 				// Set as a browser if nothing better us available
 				if($this->browser == 'unknown'){
 					$this->browser = $mobile_agent;
-					$this->browser_version = 0;
 				}
 			}
 		}

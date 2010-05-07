@@ -752,18 +752,18 @@ foreach($ua_tests as $title => $test){
 		foreach($properties as $property){
 			if(!isset($test['test'][$property]) || $test['test'][$property] == ''){
 				if(empty($browser->$property)){
-					$message = 'Not tested, not found';
+					$message = 'Not tested, <b style="color:#FF0000">not found</b>';
 				}
 				else{
 					$message = 'Not tested, found <b>'.$browser->$property.'</b>';
 				}
-				echo '<td bgcolor="#EEEEEE">'.$message.'</td>';
+				echo '<td style="background:#EEEEEE">'.$message.'</td>';
 			}
 			elseif(strtolower($test['test'][$property]) == strtolower($browser->$property)){
-				echo '<td bgcolor="#00FF00">Pass ('.$browser->$property.')</td>';
+				echo '<td style="background:#00FF00">Pass ('.$browser->$property.')</td>';
 			}
 			else{
-				echo '<td bgcolor="#FF0000">Fail (Expected <b>'.$test['test'][$property].'</b>, found <b>'.$browser->$property.'</b>)</td>';
+				echo '<td style="background:#FF0000">Fail (Expected <b>'.$test['test'][$property].'</b>, found <b>'.$browser->$property.'</b>)</td>';
 			}
 		}
 		echo '<td>'.$ua.'</td>';
