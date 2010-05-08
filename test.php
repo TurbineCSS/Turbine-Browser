@@ -739,6 +739,44 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'Konqueror 4.4' => array(
+		'ua' => 'Mozilla/5.0 (compatible; Konqueror/4.4; Linux) KHTML/4.4.1 (like Gecko) Fedora/4.4.1-1.fc12',
+		'test' => array(
+			'browser' => 'konqueror',
+			'browser_version' => '4.4',
+			'engine' => 'khtml',
+			'engine_version' => '4.41',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Konqueror 4.1 (BSD)' => array(
+		'ua' => array(
+			'Mozilla/5.0 (compatible; Konqueror/4.1; DragonFly) KHTML/4.1.4 (like Gecko)',
+			'Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)'
+		),
+		'test' => array(
+			'browser' => 'konqueror',
+			'browser_version' => '4.1',
+			'engine' => 'khtml',
+			'engine_version' => '4.14',
+			'platform' => 'unix',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Konqueror 4.0' => array(
+		'ua' => 'Mozilla/5.0 (compatible; Konqueror/4.0; Linux; x86_64) KHTML/4.0.2 (like Gecko)',
+		'test' => array(
+			'browser' => 'konqueror',
+			'browser_version' => '4.0',
+			'engine' => 'khtml',
+			'engine_version' => '4.02',
+			'platform' => 'linux',
+			'platform_version' => '0',
+			'platform_type' => 'desktop'
+		)
+	),
 
 	// Tablets and phones
 	'iPad' => array(
@@ -918,11 +956,13 @@ $ua_tests = array(
 		<table border="1">
 			<tr>
 				<th rowspan="2">Subject</th>
-				<th colspan="5">Results</th>
+				<th colspan="7">Results</th>
 				<th rowspan="2">UA-String</th>
 			</tr>
 			<tr>
 				<th>Browser</th>
+				<th>Version</th>
+				<th>Engine</th>
 				<th>Version</th>
 				<th>OS</th>
 				<th>Version</th>

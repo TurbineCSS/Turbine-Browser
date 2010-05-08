@@ -169,7 +169,7 @@ class Browser {
 			$this->platform_version = '0';
 		}
 		// Unix
-		elseif(preg_match('/(freebsd|openbsd|solaris|sunos)/i', $this->ua)){
+		elseif(preg_match('/(dragonfly|freebsd|openbsd|solaris|sunos)/i', $this->ua)){
 			$this->platform = 'unix';
 			$this->platform_type = 'desktop';
 		}
@@ -264,6 +264,17 @@ class Browser {
 			$this->engine = 'ie';
 			if(preg_match('/msie ([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
+				$this->engine_version = $this->version_to_float($matches[1]);
+			}
+		}
+		// Konqueror
+		elseif(preg_match('/konqueror/i', $this->ua)){
+			$this->browser = 'konqueror';
+			$this->engine = 'khtml';
+			if(preg_match('/konqueror\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+			if(preg_match('/khtml\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->engine_version = $this->version_to_float($matches[1]);
 			}
 		}
