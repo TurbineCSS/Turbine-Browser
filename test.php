@@ -403,6 +403,30 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'Camino 2.02' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.18) Gecko/2010021619 Camino/2.0.2 (like Firefox/3.0.18)',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '3.018',
+			'engine' => 'gecko',
+			'engine_version' => '1.9018',
+			'platform' => 'mac',
+			'platform_version' => '10.6',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Camino 1.67' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; it; rv:1.8.1.21) Gecko/20090327 Camino/1.6.7 (MultiLang) (like Firefox/2.0.0.21pre)',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '2.0021',
+			'engine' => 'gecko',
+			'engine_version' => '1.8121',
+			'platform' => 'mac',
+			'platform_version' => '10',
+			'platform_type' => 'desktop'
+		)
+	),
 
 
 	// Opera
@@ -655,7 +679,7 @@ $ua_tests = array(
 	'Midori 0.2 (Gecko)' => array(
 		'ua' => 'Mozilla/5.0 (X11; U; Linux i686; pt-br; rv:1.8.1) Gecko/20061010 Firefox/2.0 Midori/0.2.0',
 		'test' => array(
-			'browser' => 'Midori',
+			'browser' => 'midori',
 			'browser_version' => '0.2',
 			'engine' => 'gecko',
 			'engine_version' => '1.81',
@@ -667,7 +691,7 @@ $ua_tests = array(
 	'Midori 0.2 (Webkit)' => array(
 		'ua' => 'Mozilla/5.0 (iPhone; U; Linux i686; pt-br) AppleWebKit/532+ (KHTML, like Gecko) Version/3.0 Mobile/1A538b Safari/419.3 Midori/0.2.0',
 		'test' => array(
-			'browser' => 'Midori',
+			'browser' => 'midori',
 			'browser_version' => '0.2',
 			'engine' => 'webkit',
 			'engine_version' => '532',
@@ -682,7 +706,7 @@ $ua_tests = array(
 			'Midori/0.1.7 (X11; Linux; U; en-us) WebKit/532+'
 		),
 		'test' => array(
-			'browser' => 'Midori',
+			'browser' => 'midori',
 			'browser_version' => '0.17',
 			'platform' => 'linux',
 			'engine' => 'webkit',
@@ -694,7 +718,7 @@ $ua_tests = array(
 	'iCab >= 4' => array(
 		'ua' => 'iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)',
 		'test' => array(
-			'browser' => 'iCab',
+			'browser' => 'icab',
 			'browser_version' => '4.5',
 			'engine' => 'icab',
 			'engine_version' => '4.5',
@@ -706,7 +730,7 @@ $ua_tests = array(
 	'iCab < 4' => array(
 		'ua' => 'Mozilla/5.0 (compatible; iCab 3.0.5; Macintosh; U; PPC Mac OS)',
 		'test' => array(
-			'browser' => 'iCab',
+			'browser' => 'icab',
 			'browser_version' => '3.05',
 			'engine' => 'icab',
 			'engine_version' => '3.05',
