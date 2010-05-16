@@ -427,6 +427,42 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'SeaMonkey 2.02' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.7) Gecko/20100104 SeaMonkey/2.0.2',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => false,
+			'engine' => 'gecko',
+			'engine_version' => '1.917',
+			'platform' => 'windows',
+			'platform_version' => '5.2',
+			'platform_type' => 'desktop'
+		)
+	),
+	'SeaMonkey 1.5' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; pl-PL; rv:1.9a1) Gecko/20060812 SeaMonkey/1.5a',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => false,
+			'engine' => 'gecko',
+			'engine_version' => '1.9',
+			'platform' => 'windows',
+			'platform_version' => '5.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'SeaMonkey 1.1' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.8.1) Gecko/20061101 SeaMonkey/1.1b',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => false,
+			'engine' => 'gecko',
+			'engine_version' => '1.81',
+			'platform' => 'windows',
+			'platform_version' => '4.1',
+			'platform_type' => 'desktop'
+		)
+	),
 
 
 	// Opera

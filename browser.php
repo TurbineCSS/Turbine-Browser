@@ -341,7 +341,7 @@ class Browser {
 			}
 		}
 		// Firefox variations
-		elseif(preg_match('/(songbird|flock)/i', $this->ua)){
+		elseif(preg_match('/(songbird|flock|seamonkey)/i', $this->ua)){
 			$this->browser = 'firefox';
 			$this->browser_version = 'unknown';
 			$this->engine = 'gecko';
@@ -365,13 +365,13 @@ class Browser {
 		elseif(preg_match('/windows\s*([0-9\.]+)/i', $this->ua, $matches)){
 			return $this->version_to_float($matches[1]);
 		}
-		elseif(preg_match('/windows xp/i', $this->ua)){
+		elseif(preg_match('/(windows xp|winxp)/i', $this->ua)){
 			return 5.1;
 		}
-		elseif(preg_match('/windows 95/i', $this->ua)){
+		elseif(preg_match('/(windows 95|win95)/i', $this->ua)){
 			return 4;
 		}
-		elseif(preg_match('/windows 98/i', $this->ua)){
+		elseif(preg_match('/(windows 98|win98)/i', $this->ua)){
 			return 4.1;
 		}
 		elseif(preg_match('/windows me/i', $this->ua)){
