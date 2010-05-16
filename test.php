@@ -291,7 +291,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.911',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -351,7 +351,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.92',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -365,7 +365,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.923',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -377,7 +377,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.93',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -386,9 +386,10 @@ $ua_tests = array(
 		'test' => array(
 			'browser' => 'firefox',
 			'engine' => 'gecko',
+			'browser_version' => '3.0',
 			'engine_version' => '1.9014',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -396,6 +397,7 @@ $ua_tests = array(
 		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7 Flock/2.5.6 (.NET CLR 3.5.30729)',
 		'test' => array(
 			'browser' => 'firefox',
+			'browser_version' => '3.57',
 			'platform' => 'windows',
 			'engine' => 'gecko',
 			'engine_version' => '1.917',
@@ -431,7 +433,7 @@ $ua_tests = array(
 		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.7) Gecko/20100104 SeaMonkey/2.0.2',
 		'test' => array(
 			'browser' => 'firefox',
-			'browser_version' => false,
+			'browser_version' => '3.5',
 			'engine' => 'gecko',
 			'engine_version' => '1.917',
 			'platform' => 'windows',
@@ -443,7 +445,7 @@ $ua_tests = array(
 		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; pl-PL; rv:1.9a1) Gecko/20060812 SeaMonkey/1.5a',
 		'test' => array(
 			'browser' => 'firefox',
-			'browser_version' => false,
+			'browser_version' => '3.0',
 			'engine' => 'gecko',
 			'engine_version' => '1.9',
 			'platform' => 'windows',
@@ -455,7 +457,7 @@ $ua_tests = array(
 		'ua' => 'Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.8.1) Gecko/20061101 SeaMonkey/1.1b',
 		'test' => array(
 			'browser' => 'firefox',
-			'browser_version' => false,
+			'browser_version' => '2.0',
 			'engine' => 'gecko',
 			'engine_version' => '1.81',
 			'platform' => 'windows',
@@ -522,7 +524,7 @@ $ua_tests = array(
 			'engine' => 'opera',
 			'engine_version' => '9.6',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -582,7 +584,7 @@ $ua_tests = array(
 			'engine' => 'opera',
 			'engine_version' => '10.10',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -645,7 +647,7 @@ $ua_tests = array(
 			'engine' => 'webkit',
 			'engine_version' => '532.5',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -705,7 +707,7 @@ $ua_tests = array(
 			'engine' => 'webkit',
 			'engine_version' => '532.9',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -720,7 +722,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.81',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -732,7 +734,7 @@ $ua_tests = array(
 			'engine' => 'webkit',
 			'engine_version' => '532',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -747,7 +749,7 @@ $ua_tests = array(
 			'platform' => 'linux',
 			'engine' => 'webkit',
 			'engine_version' => '532',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -771,7 +773,7 @@ $ua_tests = array(
 			'engine' => 'icab',
 			'engine_version' => '3.05',
 			'platform' => 'mac',
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -783,7 +785,7 @@ $ua_tests = array(
 			'engine' => 'webkit',
 			'engine_version' => '531.2',
 			'platform' => 'Linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -795,7 +797,7 @@ $ua_tests = array(
 			'engine' => 'gecko',
 			'engine_version' => '1.908',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -807,7 +809,7 @@ $ua_tests = array(
 			'engine' => 'khtml',
 			'engine_version' => '4.41',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -822,6 +824,7 @@ $ua_tests = array(
 			'engine' => 'khtml',
 			'engine_version' => '4.14',
 			'platform' => 'unix',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -833,7 +836,7 @@ $ua_tests = array(
 			'engine' => 'khtml',
 			'engine_version' => '4.02',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
 		)
 	),
@@ -883,7 +886,7 @@ $ua_tests = array(
 			'engine' => 'opera',
 			'engine_version' => '4.010031',
 			'platform' => false,
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -893,7 +896,7 @@ $ua_tests = array(
 			'browser' => 'blackberry',
 			'browser_version' => false,
 			'platform' => 'blackberry',
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -903,7 +906,7 @@ $ua_tests = array(
 			'browser' => 'blackberry',
 			'browser_version' => false,
 			'platform' => 'blackberry',
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -913,7 +916,7 @@ $ua_tests = array(
 			'browser' => 'blackberry',
 			'browser_version' => false,
 			'platform' => 'blackberry',
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -923,7 +926,7 @@ $ua_tests = array(
 			'browser' => 'blackberry',
 			'browser_version' => false,
 			'platform' => 'blackberry',
-			'platform_version' => false,
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -935,7 +938,7 @@ $ua_tests = array(
 			'engine' => 'webkit',
 			'engine_version' => '530.17',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	),
@@ -992,7 +995,7 @@ $ua_tests = array(
 			'browser' => 'kindle',
 			'browser_version' => '2.0',
 			'platform' => 'linux',
-			'platform_version' => '0',
+			'platform_version' => 'unknown',
 			'platform_type' => 'mobile'
 		)
 	)
