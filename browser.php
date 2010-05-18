@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Browser - A PHP browser sniffer
- * http://github.com/SirPepe/Browser
+ * Turbine-Browser - A PHP browser sniffer made for Turbine
+ * http://github.com/SirPepe/Turbine-Browser
  *
  * Copyright (C) 2010 Peter Kröner
  *

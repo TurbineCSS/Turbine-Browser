@@ -1,4 +1,6 @@
-Basset
-======
+Turbine-Browser
+===============
 
-PHP browser sniffer
+Turbine's browser sniffer
+
+http://github.com/SirPepe/Turbine
