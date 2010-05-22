@@ -942,6 +942,30 @@ $ua_tests = array(
 			'platform_type' => 'mobile'
 		)
 	),
+	'NetFront @ PalmOS' => array(
+		'ua' => 'Mozilla/4.0 (PDA; PalmOS/sony/model crdb/Revision:1.1.36(de)) NetFront/3.0',
+		'test' => array(
+			'browser' => 'netfront',
+			'browser_version' => '3.0',
+			'engine' => 'unknown',
+			'engine_version' => 'unknown',
+			'platform' => 'palm',
+			'platform_version' => 'unknown',
+			'platform_type' => 'mobile'
+		)
+	),
+	'NetFront @ Win CE' => array(
+		'ua' => 'Mozilla/4.0 (PDA; Windows CE/0.9.3) NetFront/3.0',
+		'test' => array(
+			'browser' => 'netfront',
+			'browser_version' => '3.0',
+			'engine' => 'unknown',
+			'engine_version' => 'unknown',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
 	'HP' => array(
 		'ua' => array(
 			'Mozilla/4.0 (compatible; MSIE 4.01; Windows CE; PPC; 240x320; HP iPAQ h6300)',

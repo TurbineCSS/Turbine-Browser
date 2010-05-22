@@ -313,6 +313,13 @@ class Browser {
 				}
 			}
 		}
+		// NetFront
+		elseif(preg_match('/netfront/i', $this->ua)){
+			$this->browser = 'netfront';
+			if(preg_match('/netfront\/([0-9\.]+)/i', $this->ua, $matches)){
+				$this->browser_version = $this->version_to_float($matches[1]);
+			}
+		}
 		// Opera
 		elseif(preg_match('/opera/i', $this->ua)){
 			$this->engine = 'opera';
