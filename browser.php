@@ -82,7 +82,8 @@ class Browser {
 		'symbian',
 		'wap',
 		'htc(-|_)',
-		'midip'
+		'midip',
+		'benq'
 	);
 
 
