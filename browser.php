@@ -231,7 +231,7 @@ class Browser {
 			$this->engine_version = $this->get_webkit_version();
 		}
 		// Chrome
-		elseif(preg_match('/chrome/i', $this->ua)){
+		elseif(preg_match('/chrome/i', $this->ua) && !preg_match('/chromeframe/i', $this->ua)){
 			$this->browser = 'chrome';
 			if(preg_match('/chrome\/([0-9\.]+)/i', $this->ua, $matches)){
 				$this->browser_version = $this->version_to_float($matches[1]);
