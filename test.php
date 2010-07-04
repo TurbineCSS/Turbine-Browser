@@ -233,6 +233,42 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'Safari 5 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.0; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '5.0',
+			'engine' => 'webkit',
+			'engine_version' => '533.16',
+			'platform' => 'windows',
+			'platform_version' => '6.0',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Safari 5 on Win7' => array(
+		'ua' => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '5.0',
+			'engine' => 'webkit',
+			'engine_version' => '533.16',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Safari 5 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; el-gr) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16',
+		'test' => array(
+			'browser' => 'safari',
+			'browser_version' => '5.0',
+			'engine' => 'webkit',
+			'engine_version' => '533.16',
+			'platform' => 'mac',
+			'platform_version' => '10.63',
+			'platform_type' => 'desktop'
+		)
+	),
 
 	// Gecko/Mozilla
 	'Firefox 3.5 on Win7' => array(
