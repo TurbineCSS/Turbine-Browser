@@ -135,6 +135,18 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'Windows Phone 7' => array(
+		'ua' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; <DeviceManufacturer>;<DeviceModel>)',
+		'test' => array(
+			'browser' => 'ie',
+			'browser_version' => '7',
+			'engine' => 'ie',
+			'engine_version' => '7',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
 
 	// Safari
 	'Safari 3.1 on Win7' => array(

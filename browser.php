@@ -72,7 +72,8 @@ class Browser {
 		'wap',
 		'htc(-|_)',
 		'midip',
-		'benq'
+		'benq',
+		'windows phone os'
 	);
 
 
