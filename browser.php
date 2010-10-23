@@ -125,10 +125,14 @@ class Browser {
 		// Windows
 		if(preg_match('/windows/i', $this->ua)){
 			$this->platform = 'windows';
-			// Windows mobile or desktop?
+			// Windows mobile, phone, or desktop?
 			if(preg_match('/Windows CE/i',$this->ua)){
 				$this->platform_type = 'mobile';
 				$this->platform_version = '0';
+			}
+			elseif(preg_match('/IEMobile\/([0-9\.])/i',$this->ua, $matches)){
+				$this->platform_type = 'mobile';
+				$this->platform_version = $matches[0];
 			}
 			else{
 				if($this->detect_mobile_devices() !== false){
