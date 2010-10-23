@@ -133,7 +133,7 @@ class Browser {
 			}
 			elseif(preg_match('/IEMobile\/([0-9\.])/i',$this->ua, $matches)){
 				$this->platform_type = 'mobile';
-				$this->platform_version = $matches[0];
+				$this->platform_version = $matches[1];
 			}
 			else{
 				if($this->detect_mobile_devices() !== false){

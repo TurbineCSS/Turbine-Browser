@@ -143,7 +143,7 @@ $ua_tests = array(
 			'engine' => 'ie',
 			'engine_version' => '7',
 			'platform' => 'windows',
-			'platform_version' => '0',
+			'platform_version' => '7',
 			'platform_type' => 'mobile'
 		)
 	),
