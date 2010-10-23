@@ -135,6 +135,18 @@ $ua_tests = array(
 			'platform_type' => 'desktop'
 		)
 	),
+	'Windows Phone 7' => array(
+		'ua' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; <DeviceManufacturer>;<DeviceModel>)',
+		'test' => array(
+			'browser' => 'ie',
+			'browser_version' => '7',
+			'engine' => 'ie',
+			'engine_version' => '7',
+			'platform' => 'windows',
+			'platform_version' => '0',
+			'platform_type' => 'mobile'
+		)
+	),
 
 	// Safari
 	'Safari 3.1 on Win7' => array(
@@ -386,6 +398,42 @@ $ua_tests = array(
 			'browser_version' => '3.6',
 			'engine' => 'gecko',
 			'engine_version' => '1.92',
+			'platform' => 'linux',
+			'platform_version' => 'unknown',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 4.0 on Vista' => array(
+		'ua' => 'Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/xxxxyyzz Firefox/4.0.1',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '4.01',
+			'engine' => 'gecko',
+			'engine_version' => '2.01',
+			'platform' => 'windows',
+			'platform_version' => '6.1',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 4.0 on OS X' => array(
+		'ua' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/xxxxyyzz Firefox/4.0.1',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '4.01',
+			'engine' => 'gecko',
+			'engine_version' => '2.01',
+			'platform' => 'mac',
+			'platform_version' => '10.6',
+			'platform_type' => 'desktop'
+		)
+	),
+	'Firefox 4.0 on Linux' => array(
+		'ua' => 'Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/xxxxyyzz Firefox/4.0.1',
+		'test' => array(
+			'browser' => 'firefox',
+			'browser_version' => '4.01',
+			'engine' => 'gecko',
+			'engine_version' => '2.01',
 			'platform' => 'linux',
 			'platform_version' => 'unknown',
 			'platform_type' => 'desktop'
